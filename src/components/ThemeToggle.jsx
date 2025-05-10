@@ -10,7 +10,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="text-xl p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-800">
+      className="text-xl p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-800 dark:bg-gray-900 bg-gray-100">
       {theme === "dark" ? <Sun /> : <Moon />}
     </button>
   );
