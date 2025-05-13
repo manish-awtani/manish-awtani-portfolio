@@ -1,6 +1,7 @@
 import React from 'react'
 import ThemeToggle from '../components/ThemeToggle';
 import Header from '../components/Header';
+import BottomNav from "../components/BottomNav";
 
 const MainLayout = ({ children }) => {
   return (
@@ -9,8 +10,9 @@ const MainLayout = ({ children }) => {
         <h1 className="text-lg font-semibold">Manish Awtani</h1>
         <ThemeToggle />
       </header> */}
-        <Header />
+      <Header />
       <main className="p-6">{children}</main>
+      {/* <BottomNav /> */}
     </div>
   );
 }
