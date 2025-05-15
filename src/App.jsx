@@ -1,8 +1,13 @@
 // import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import './App.css'
 import Hero from './components/Hero';
 import MainLayout from './layouts/MainLayout';
+import Projects from "./pages/Projects";
+import AboutMe from "./pages/AboutMe";
+import Blogs from "./pages/Blogs";
+import Experience from "./pages/Experience";
 
 function App() {
 
@@ -14,10 +19,20 @@ function App() {
       </h2>
     </div> */}
   return (
+    // <MainLayout>
+    //   <Hero />
+    // </MainLayout>
+    <Router>
       <MainLayout>
-        <Hero />
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/aboutme" element={<AboutMe />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/experience" element={<Experience />} />
+        </Routes>
       </MainLayout>
-    
+    </Router>
   );
 }
 
