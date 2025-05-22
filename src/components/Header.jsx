@@ -12,6 +12,8 @@ const avatarImages = [
   "src/assets/avatars/mani-4.png",
   "src/assets/avatars/mani-5.png",
   "src/assets/avatars/mani-6.png",
+  "src/assets/avatars/chill-guy.jpeg",
+  "src/assets/avatars/duck.jpeg",
 ];
 
 const Header = () => {
