@@ -8,7 +8,9 @@ export default {
         sixty: "1024px", // 60% of 1440px
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        gabirato: ["Gabarito", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+        sans: ["Inter", "sans-serif", ],
       },
       colors: {
         mblack: "#121212",
