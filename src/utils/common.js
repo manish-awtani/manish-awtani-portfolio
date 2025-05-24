@@ -47,12 +47,13 @@ export const dinoGame = () => {
       ---------------------------------------------
       `,
           `
-      👀 Caught you peeking!
-      💻 Curiosity led you here...
+    👀 Caught you stalking!?
+        OR Curiosity led you here..???
       
-      🤝 Let’s build something awesome → manish@example.com
-      📫 Slide into my inbox: manish@example.com
-      🏗️ Wanna team up? You’re just one email away!
+        Wanna team up? You’re just one email away!
+        Let’s build something awesome → manishawtani09@gmail.com 
+                                        ------------------------
+        Please refresh website, while your console is open to see the dino again! 
       `,
         ];
     
@@ -63,6 +64,6 @@ export const dinoGame = () => {
               `%c${frame}`,
               "color: #1e90ff; font-weight: bold; font-size: 14px;"
             );
-          }, index * 700);
+          }, index * 900);
         });
 }

@@ -8,6 +8,7 @@ import Projects from "./pages/Projects";
 import AboutMe from "./pages/AboutMe";
 import Blogs from "./pages/Blogs";
 import Experience from "./pages/Experience";
+import CursorTrail from "./components/CursorTrail";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
     //   <Hero />
     // </MainLayout>
     <Router>
+      {/* <CursorTrail /> */}
       <MainLayout>
         <Routes>
           <Route path="/" element={<Hero />} />

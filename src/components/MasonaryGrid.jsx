@@ -24,10 +24,12 @@ const MasonaryGrid = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full object-cover rounded-t-xl"
+                className={`w-full object-cover rounded-t-xl ${
+                  [0, 2, 7].includes(index) ? "aspect-[25/16]" : "aspect-[3/4]"
+                }`}
                 style={{ width: "100%", display: "block" }}
               />
-              <div className="p-4">
+              {/* <div className="p-4">
                 <h3 className="font-semibold text-lg mb-1">{item.title}</h3>
                 {item.description && (
                   <p className="text-sm text-gray-600 dark:text-gray-300">
@@ -44,7 +46,7 @@ const MasonaryGrid = () => {
                     View →
                   </a>
                 )}
-              </div>
+              </div> */}
             </div>
           ))}
         </Masonry>

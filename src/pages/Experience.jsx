@@ -18,8 +18,8 @@ const Experience = () => {
       id="experience"
       className="min-h-screen flex flex-col justify-start items-center py-16 px-4"
     >
-      <div className="max-w-4xl w-full flex flex-col items-start text-left gap-4 ">
-        <h2 className="text-5xl font-bold border-b-4 border-pink-500 w-fit pb-2">
+      <div className="max-w-4xl w-full font-inter flex flex-col items-start text-left gap-4 text-gray-800 dark:text-gray-200">
+        <h2 className="text-5xl font-bold font-gabarito border-b-4 border-pink-500 w-fit pb-2">
           Work
         </h2>
 
@@ -61,22 +61,22 @@ const Experience = () => {
                 {exp.company}, {exp.location} — <span>{exp.period}</span>
               </p> */}
               <div className="flex justify-between items-center flex-wrap mb-3">
-              <div className="flex items-center gap-2">
-                <img
-                  src="src/assets/logos/srkay-logo.png"
-                  alt="GTU"
-                  className="h-7 w-7 object-contain"
-                />
+                <div className="flex items-center gap-2">
+                  <img
+                    src="src/assets/logos/srkay-logo.png"
+                    alt="GTU"
+                    className="h-7 w-7 object-contain"
+                  />
 
-                <a
-                  href={exp.companyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 dark:text-gray-400 hover:underline transition"
-                  // className="text-gray-600 dark:text-gray-400 border-b border-dotted border-gray-400 hover:border-b-2 hover:border-pink-500 transition duration-200"
-                >
-                  {exp.company}, {exp.location}
-                </a>
+                  <a
+                    href={exp.companyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 dark:text-gray-400 hover:underline transition"
+                    // className="text-gray-600 dark:text-gray-400 border-b border-dotted border-gray-400 hover:border-b-2 hover:border-pink-500 transition duration-200"
+                  >
+                    {exp.company}, {exp.location}
+                  </a>
                 </div>
                 <span className="text-base text-gray-500 dark:text-gray-400">
                   {exp.period}
@@ -106,20 +106,20 @@ const Experience = () => {
               <div className="text-2xl font-semibold mb-1">{edu.degree}</div>
               <div className="flex justify-between items-center flex-wrap mb-3">
                 <div className="flex items-center gap-2">
-                <img
-                  src="src/assets/logos/gtu-logo.png"
-                  alt="GTU"
-                  className="h-6 w-6 object-contain"
-                />
+                  <img
+                    src="src/assets/logos/gtu-logo.png"
+                    alt="GTU"
+                    className="h-6 w-6 object-contain"
+                  />
 
-                <a
-                  href={edu.companyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 dark:text-gray-400 hover:underline transition"
-                >
-                  {edu.institution}, {edu.location}
-                </a>
+                  <a
+                    href={edu.companyUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 dark:text-gray-400 hover:underline transition"
+                  >
+                    {edu.institution}, {edu.location}
+                  </a>
                 </div>
                 <span className="text-base text-gray-500 dark:text-gray-400">
                   {edu.period}

@@ -1,58 +1,67 @@
 const masonryItems = [
+  // 1
   {
-    title: "AI Code Assistant",
-    image: "src/assets/avatars/chill-guy.jpeg",
-    category: "Project",
-    link: "https://github.com/your-repo/ai-assistant",
+    title: "Mani Buddha Husky",
+    image: "src/assets/masonry-images/mani-husky.png",
+    category: "Photography",
     description: "My signature dish — cooked from scratch!",
   },
+
   {
     title: "Dum Biryani 🍛",
-    image: "src/assets/avatars/duck.jpeg",
+    image: "src/assets/masonry-images/mani-back-kedarkantha.JPG",
     category: "Hobby",
     description: "My signature dish — cooked from scratch!",
   },
   {
-    title: "UseEffect Cheatsheet",
-    image: "src/assets/avatars/manish-2.png",
-    category: "Code",
+    title: "Yamnotri",
+    image: "src/assets/masonry-images/yamnotri.png",
+    category: "Art",
     description: "My signature dish — cooked from scratch!",
   },
+  // {
+  //   title: "UseEffect Cheatsheet",
+  //   image: "src/assets/avatars/manish-2.png",
+  //   category: "Code",
+  //   description: "My signature dish — cooked from scratch!",
+  // },
   {
-    title: "Why Devs Need Coffee ☕️",
-    image: "/images/dev-meme.jpeg",
-    category: "Meme",
-    description: "My signature dish — cooked from scratch!",
-  },
-  {
-    title: "Nature Walk",
-    image: "https://source.unsplash.com/random/300x400?nature,1",
-    category: "Photography",
-    description: "My signature dish — cooked from scratch!",
-  },
-  {
-    title: "City Lights",
-    image: "https://source.unsplash.com/random/300x500?city,2",
-    category: "Photography",
-    description: "My signature dish — cooked from scratch!",
-  },
-  {
-    title: "Abstract Art",
-    image: "https://source.unsplash.com/random/300x450?abstract,3",
+    title: "Mani Yoga Yamnotri",
+    image: "src/assets/masonry-images/mani-yoga-ganga.png",
     category: "Art",
     description: "My signature dish — cooked from scratch!",
   },
 
   {
-    title: "Tech Conference",
-    image: "https://source.unsplash.com/random/300x350?tech,4",
+    title: "Kedarkantha",
+    image: "src/assets/masonry-images/kedarkantha-night.JPG",
     category: "Event",
     description: "My signature dish — cooked from scratch!",
   },
   {
-    title: "Coffee Time",
-    image: "https://source.unsplash.com/random/300x380?coffee,5",
-    category: "Lifestyle",
+    title: "Mani Standing Ganga",
+    image: "src/assets/masonry-images/mani-standing-ganga.png",
+    category: "Photography",
+    description: "My signature dish — cooked from scratch!",
+  },
+  {
+    title: "Yamnotri",
+    image: "src/assets/masonry-images/mani-back-achieved.JPG",
+    category: "Art",
+    description: "My signature dish — cooked from scratch!",
+  },
+  //
+
+  {
+    title: "DUCK",
+    image: "src/assets/avatars/duck.jpeg",
+    category: "Event",
+    description: "My signature dish — cooked from scratch!",
+  },
+  {
+    title: "Kedarkantha",
+    image: "src/assets/masonry-images/kedarkantha.png",
+    category: "Event",
     description: "My signature dish — cooked from scratch!",
   },
 ];

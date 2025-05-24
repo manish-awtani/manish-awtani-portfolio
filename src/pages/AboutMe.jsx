@@ -7,13 +7,13 @@ const AboutMe = () => {
       className="min-h-screen flex flex-col justify-start items-center py-16 px-4"
     >
       <div className="max-w-4xl w-full flex flex-col items-start text-left gap-8">
-        <h2 className="text-5xl font-bold  text-gray-700 dark:text-gray-300 border-b-4 border-pink-500 w-fit pb-2">
+        <h2 className="text-5xl font-bold  text-gray-800 dark:text-gray-300 border-b-4 border-pink-500 w-fit pb-2">
           About Me
         </h2>
         <div className="flex flex-col md:flex-row gap-4 items-start justify-between">
           <div className="text-lg md:w-2/3 text-gray-700 dark:text-gray-300 leading-relaxed space-y-6">
             {/* <h2 className="text-5xl font-bold border-b-4 border-pink-500 w-fit pb-2">
-            About Me
+            About Me If you want to know more about me, send me a message or reach out to me at akhileshrangani4@gmail.com.
             </h2> */}
             <p>
               I’ve always been fascinated by the “how” behind the things I use.

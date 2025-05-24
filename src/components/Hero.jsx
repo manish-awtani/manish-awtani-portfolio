@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { FaLinkedinIn, FaMedium, FaWifi, FaWikipediaW, FaX, FaXTwitter } from "react-icons/fa6";
-import MasonryGrid from "./MasonryGrid";
+// import MasonryGrid from "./MasonryGrid";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { dinoGame } from "../utils/common";
-// import MasonaryGrid from "./MasonaryGrid";
+import MasonaryGrid from "./MasonaryGrid";
+import { FiArrowRight, FiArrowRightCircle, FiArrowUpLeft, FiArrowUpRight } from "react-icons/fi";
 
 const Hero = () => {
   useEffect(() => {
@@ -15,8 +16,8 @@ const Hero = () => {
       id="hero"
       className="min-h-screen flex flex-col justify-start items-center py-16 px-4"
     >
-      <div className="max-w-4xl w-full flex flex-col items-start text-left gap-4">
-        <h2 className="text-5xl font-bold">
+      <div className="max-w-4xl w-full flex flex-col items-start text-left gap-4 font-inter text-gray-800 dark:text-gray-200">
+        <h2 className="text-5xl font-bold font-gabarito">
           Hey, I’m Manish!
           {/* 👋 */}
         </h2>
@@ -27,7 +28,7 @@ const Hero = () => {
           </p>
           <div className="flex items-center gap-3">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/manish-awtani"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition"
@@ -35,7 +36,7 @@ const Hero = () => {
               <FaGithub size={24} />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/manish-awtani/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition"
@@ -81,15 +82,67 @@ const Hero = () => {
             {/* {" "} */}
             I'm a <span className="font-semibold">software engineer</span>, a
             <span className="font-semibold"> self-taught chef</span>, and
-            someone who’s constantly chasing that next big idea.{" "}
-            <span className="font-semibold">full-stack developer</span>,{" "}
-            <span className="font-semibold">ai enthusiast</span>. I also write
-            articles on computer science. I love chatting about new ideas, tech
-            startups, and great products.
+            someone who’s constantly chasing that next big idea. I currently
+            work at{" "}
+            <a
+              href="https://www.srkay.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-pink-500 hover:underline hover:decoration-pink-500 hover:text-pink-500"
+            >
+              SRKay Consulting Group
+            </a>
+            , while also working on a few side-hustle mobile apps and ai driven
+            projects.
+            <br />
+            <br />I also write articles on math and computer science, and I love
+            chatting about new ideas, tech startups, and great products over
+            coffee. When I’m not doing that, I’m probably off on a solo trip to
+            the mountains — clearing my head, sketching ideas, or just watching
+            the clouds drift and dreaming up what’s next.
           </p>
         </div>
-        <MasonryGrid />
-        {/* <MasonaryGrid /> */}
+        {/* <MasonryGrid /> */}
+        <MasonaryGrid />
+        <p>
+          This is my little corner of the internet where I share my work, ideas
+          and whatever’s cooking — on the screen or in the kitchen.
+        </p>
+        {/* <div className="mt-8">
+          <a
+            href="#blog" // Or replace with /blog if it's a route
+            className="inline-block px-6 py-3 bg-black text-white dark:bg-white dark:text-black font-medium rounded-lg shadow hover:shadow-md transition hover:bg-gray-800 dark:hover:bg-gray-100"
+          >
+            Read My Blog
+          </a>
+        </div> */}
+        <div className="mt-8 text-center font-inter">
+          <p className="text-lg">
+            Interested in collaborating or chatting about an idea?{" "}
+            <a
+              href="aboutme"
+              className="text-pink-500 hover:underline inline-flex items-center gap-1"
+            >
+              Let’s talk
+              <FiArrowRight className="inline-block transform rotate-[320deg]" />
+            </a>
+          </p>
+        </div>
+        <div className="mt-8 bg-gray-100 dark:bg-zinc-900 text-zinc-900 dark:text-white p-6 rounded-lg shadow w-full font-inter">
+          <h3 className="text-xl font-bold mb-2">Latest Blog Post</h3>
+          <p className="text-gray-700 dark:text-gray-300 mb-4">
+            “Why Math is the Secret Weapon of Great Developers” – I explore how
+            core math concepts empower elegant problem solving in software
+            engineering.
+          </p>
+          <a
+            href="/blog/math-secret-weapon"
+            className="text-pink-500 dark:text-pink-500 font-medium hover:underline"
+          >
+            Read More
+            <FiArrowRight className="inline-block transform rotate-[320deg]" />
+          </a>
+        </div>
       </div>
     </section>
   );
