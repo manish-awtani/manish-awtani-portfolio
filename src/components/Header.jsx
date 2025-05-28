@@ -32,6 +32,13 @@ const Header = () => {
   const navigate = useNavigate(); // react-router navigation
   const navItems = [ "Experience","Projects", "Blogs", "About Me"];
 
+  useEffect(() => {
+    avatarImages.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+  
   // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
