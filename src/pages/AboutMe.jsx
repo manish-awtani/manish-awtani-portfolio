@@ -51,7 +51,7 @@ const AboutMe = () => {
           {/* Image on the right */}
           <div className="md:w-1/3 w-full flex justify-center md:justify-end">
             <img
-              src="src/assets/avatars/mani-3.png"
+              src="avatars/mani-3.png"
               alt="Manish's photo"
               className="rounded-xl shadow-lg max-w-sm w-full object-cover"
             />
