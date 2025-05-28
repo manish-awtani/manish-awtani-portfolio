@@ -5,6 +5,11 @@ import ThemeToggle from "./ThemeToggle";
 import confetti from "canvas-confetti";
 import { Menu, X } from "lucide-react"; // If using Lucide icons (or use any hamburger SVG)
 
+const clickSound = new Audio("/public/mixkit-fast-double-click-on-mouse-275.wav");
+// const clickSound = new Audio("public/mixkit-click-error-1110.wav");
+// const clickSound = new Audio("public/mixkit-sci-fi-click-900.wav");
+// const clickSound = new Audio("public/mixkit-sci-fi-interface-robot-click-901.wav");
+
 const avatarImages = [
   "src/assets/avatars/mani-1.jpg",
   "src/assets/avatars/manish-2.png",
@@ -12,6 +17,8 @@ const avatarImages = [
   "src/assets/avatars/mani-4.png",
   "src/assets/avatars/mani-5.png",
   "src/assets/avatars/mani-6.png",
+  "src/assets/avatars/chill-guy.jpeg",
+  "src/assets/avatars/duck.jpeg",
 ];
 
 const Header = () => {
@@ -23,7 +30,7 @@ const Header = () => {
   const menuRef = useRef(null);
   const menuButtonRef = useRef(null);
   const navigate = useNavigate(); // react-router navigation
-  const navItems = ["Projects", "Blogs", "Experience", "About Me"];
+  const navItems = [ "Experience","Projects", "Blogs", "About Me"];
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -45,7 +52,11 @@ const Header = () => {
     };
   }, [menuOpen]);
 
-  const handleProfileClick = () => {
+  const handleProfileClick = () => {  
+    // Play the sound
+    clickSound.currentTime = 0; // rewind to start
+    clickSound.play().catch((err) => console.warn("Sound play failed:", err));
+  
     // Cycle through images
     const nextIndex = (currentIndex + 1) % avatarImages.length;
     setCurrentIndex(nextIndex);

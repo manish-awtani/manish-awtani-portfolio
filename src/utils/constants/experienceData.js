@@ -50,4 +50,19 @@ const experienceData = [
   },
 ];
 
+export const educationData = [
+  {
+    degree: "Bachelor of Engineering - B.E., Computer Science and Engineering",
+    institution: "Gujarat Technological University",
+    companyUrl: "https://www.gtu.ac.in",
+    location: "Ahmedabad, India",
+    period: "June 2019 - May 2023",
+    achievements: [
+      "GPA: 8.5/10 (Top 7% of the class)",
+      // "Completed courses in Data Structures, Algorithms, Database Management Systems, and Software Engineering.",
+      // "Participated in hackathons and coding competitions, securing top positions.",
+    ],
+  },
+];
+
 export default experienceData;

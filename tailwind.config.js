@@ -4,8 +4,24 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      screens: {
+        sixty: "1024px", // 60% of 1440px
+      },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        gabirato: ["Gabarito", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+        sans: ["Inter", "sans-serif", ],
+      },
+      colors: {
+        mblack: "#121212",
+        white: "#ffffff",
+        softLight: "#f7faff",
+        deepDark: "#1e293b",
+        accentCyan: "#0ea5e9",
+        accentPurple: "#a855f7",
+        sand: {
+          DEFAULT: "#f5deb3", // soft sand
+        },
       },
       animation: {
         borderGradient: "borderGradient 4s ease-in-out infinite",
