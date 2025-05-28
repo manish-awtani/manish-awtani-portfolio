@@ -18,16 +18,18 @@ const Experience = () => {
       id="experience"
       className="min-h-screen flex flex-col justify-start items-center py-16 px-4"
     >
-      <div className="max-w-4xl w-full font-inter flex flex-col items-start text-left gap-4 text-gray-800 dark:text-gray-200">
-        <h2 className="text-5xl font-bold font-gabarito border-b-4 border-pink-500 w-fit pb-2">
+      <div className="max-w-4xl w-full font-inter flex flex-col items-start text-left gap-4 
+      text-gray-700 dark:text-gray-300 leading-relaxed">
+        <h2 className="text-5xl font-bold font-gabarito text-gray-800 dark:text-gray-200 border-b-4 border-pink-500 
+        w-fit pb-2 ">
           Work
         </h2>
 
-        <p className="text-lg text-gray-600 dark:text-gray-400">
+        <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
           My professional journey so far
         </p>
-        <h3 className="mt-10  text-4xl font-bold">Summary</h3>
-        <p className="text-lg text-gray-600 dark:text-gray-400">
+        <h3 className="mt-10 text-4xl text-gray-800 dark:text-gray-200 font-bold mb-2">Summary</h3>
+        <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
           As a kid, I wanted to be an astronaut. Or a chef. Or maybe both. What
           I didn’t know back then was how early you had to prepare for those
           dreams. What I did know was that I loved computers — and playing games
@@ -51,9 +53,10 @@ const Experience = () => {
           applications. I’m the "tech guy" in the family, the one friends call
           when something’s broken — or when they want to build something big.
         </p>
-        <h3 className="mt-10 text-4xl font-bold">Experience</h3>
+        <h3 className="mt-10 text-4xl text-gray-800 dark:text-gray-200 font-bold mb-2">Experience</h3>
 
-        <div className="w-full text-left text-lg text-gray-700 dark:text-gray-300 leading-relaxed space-y-10">
+        <div className="w-full text-left text-lg text-gray-700 dark:text-gray-300 leading-relaxed 
+        space-y-10">
           {experienceData.map((exp, index) => (
             <div key={index} className="space-y-2">
               <div className="text-2xl font-semibold mb-1">{exp.role}</div>
@@ -73,7 +76,8 @@ const Experience = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-600 dark:text-gray-400 hover:underline transition"
-                    // className="text-gray-600 dark:text-gray-400 border-b border-dotted border-gray-400 hover:border-b-2 hover:border-pink-500 transition duration-200"
+                    // className="text-gray-600 dark:text-gray-400 border-b border-dotted border-gray-400 
+                    // hover:border-b-2 hover:border-pink-500 transition duration-200"
                   >
                     {exp.company}, {exp.location}
                   </a>
@@ -82,7 +86,7 @@ const Experience = () => {
                   {exp.period}
                 </span>
               </div>
-              <ul className="list-disc pl-5 mt-2">
+              <ul className="list-disc pl-5 mt-2 text-gray-800 dark:text-gray-300">
                 {exp.achievements.map((item, idx) => (
                   <li
                     key={idx}
@@ -97,10 +101,11 @@ const Experience = () => {
             </div>
           ))}
         </div>
-        <h3 className="mt-10 text-4xl font-bold">Education</h3>
+        <h3 className="mt-10 text-4xl text-gray-800 dark:text-gray-200 font-bold mb-2">Education</h3>
 
         {/* Education Section */}
-        <div className="w-full text-left text-lg text-gray-700 dark:text-gray-300 leading-relaxed space-y-10 mt-6">
+        <div className="w-full text-left text-lg text-gray-700 dark:text-gray-300 leading-relaxed 
+        space-y-10">
           {educationData.map((edu, index) => (
             <div key={index} className="space-y-2">
               <div className="text-2xl font-semibold mb-1">{edu.degree}</div>
@@ -125,7 +130,7 @@ const Experience = () => {
                   {edu.period}
                 </span>
               </div>
-              <ul className="list-disc pl-5 mt-2">
+              <ul className="list-disc pl-5 mt-2 text-gray-800 dark:text-gray-300">
                 {edu.achievements.map((item, idx) => (
                   <li
                     key={idx}

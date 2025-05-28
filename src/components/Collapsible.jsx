@@ -36,16 +36,17 @@ const handleClose = () => {
   return (
     <div
       className={`transition-all duration-300 hover:border dark:hover:border-white  hover:border-gray-700 
-        rounded-lg p-4 bg-white dark:bg-[#121212] hover:bg-[#1c1c1c] hover:bg-white dark:bg-[#121212] cursor-pointer shadow-sm group`} // dark:bg-zinc-900
+        rounded-lg p-4 bg-white dark:bg-[#121212] hover:bg-[#1c1c1c] hover:bg-white dark:bg-[#121212] 
+        cursor-pointer shadow-sm group`} // dark:bg-zinc-900
       onMouseEnter={!isMobile ? handleToggle : undefined}
       onMouseLeave={!isMobile ? handleClose : undefined}
       onClick={isMobile ? () => setIsExpanded((prev) => !prev) : undefined}
     >
       <div className="flex items-center justify-between">
-        <h2 className="text-lg font-medium text-black dark:text-white">
+        <h2 className="text-lg font-medium text-gray-900 dark:text-gray-100 gap-4">
           {title}
         </h2>
-        <span className="text-sm">{year}</span>
+        <span className="text-sm text-gray-400">{year}</span>
       </div>
 
       <div

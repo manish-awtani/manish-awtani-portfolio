@@ -6,12 +6,13 @@ const AboutMe = () => {
       id="about"
       className="min-h-screen flex flex-col justify-start items-center py-16 px-4"
     >
-      <div className="max-w-4xl w-full flex flex-col items-start text-left gap-8">
-        <h2 className="text-5xl font-bold  text-gray-800 dark:text-gray-300 border-b-4 border-pink-500 w-fit pb-2">
+      <div className="max-w-4xl w-full flex flex-col items-start text-left gap-4">
+        <h2 className="text-5xl font-bold font-gabarito text-gray-800 dark:text-gray-200 
+        border-b-4 border-pink-500 w-fit pb-2 mb-10">
           About Me
         </h2>
         <div className="flex flex-col md:flex-row gap-4 items-start justify-between">
-          <div className="text-lg md:w-2/3 text-gray-700 dark:text-gray-300 leading-relaxed space-y-6">
+          <div className="text-lg md:w-2/3 font-inter text-gray-700 dark:text-gray-300 leading-relaxed space-y-6">
             {/* <h2 className="text-5xl font-bold border-b-4 border-pink-500 w-fit pb-2">
             About Me If you want to know more about me, send me a message or reach out to me at akhileshrangani4@gmail.com.
             </h2> */}
@@ -56,11 +57,11 @@ const AboutMe = () => {
             />
           </div>
         </div>
-        <div className="mt-16 space-y-6 w-full">
-          <h3 className="text-4xl font-bold text-gray-700 dark:text-gray-300">
+        <div className="mt-14 space-y-6 w-full">
+          <h3 className="text-4xl font-bold font-gabarito text-gray-700 dark:text-gray-300 mb-4">
             Contact
           </h3>
-          <p className="text-lg text-gray-600 dark:text-gray-400">
+          <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
             Send me an email to say hi, or connect via the socials.
           </p>
 
@@ -84,7 +85,7 @@ const AboutMe = () => {
                 GitHub
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="https://yournewsletter.com"
                 target="_blank"
@@ -93,7 +94,7 @@ const AboutMe = () => {
               >
                 Newsletter
               </a>
-            </li>
+            </li> */}
             <li>
               <a
                 href="https://www.linkedin.com/in/manish-awtani/"
@@ -108,21 +109,20 @@ const AboutMe = () => {
 
           <h4 className="text-2xl font-semibold mt-10">What I'm Doing Now</h4>
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            Updated May 20th, 2025
+            Updated May 28th, 2025
           </p>
-          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
+          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 font-inter leading-relaxed">
             <li>Working full-time</li>
             <li>Playing Marvel Rivals</li>
             <li>Trekking across India</li>
             <li>Building a new side project</li>
-            Learning how to garden and landscape
           </ul>
 
           <h4 className="text-2xl font-semibold mt-10">Miscellaneous</h4>
-          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300">
+          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 font-inter leading-relaxed">
             <li>
               <a
-                href="https://drive.google.com/file/d/1a0Eea939bw8yOw3E7g0Ln5Et7ZzmAgXt/view"
+                href="https://drive.google.com/file/d/1-7sDcpmzguqBGN7uSM3NEiP1rt8V78yB/view?usp=sharing"
                 className="underline hover:text-blue-500"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -130,14 +130,14 @@ const AboutMe = () => {
                 Resume
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="/illustrations"
                 className="underline hover:text-blue-500"
               >
                 Illustrations
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

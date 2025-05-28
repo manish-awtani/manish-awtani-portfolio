@@ -24,9 +24,12 @@ const blogPosts = [
 
 const Blogs = () => {
   return (
+    // min-h-screen
     <section className="min-h-screen flex flex-col justify-start items-center py-16 px-4">
-      <div className="max-w-4xl w-full font-inter items-start text-left text-gray-800 dark:text-gray-200">
-        <h2 className="text-5xl font-bold font-gabarito border-b-4 border-pink-500 w-fit pb-2 mb-10">
+      <div className="max-w-4xl w-full items-start font-inter text-gray-700 dark:text-gray-300 text-left gap-4 
+   leading-relaxed">
+        <h2 className="text-5xl font-bold font-gabarito text-gray-800 dark:text-gray-200 border-b-4 border-pink-500 w-fit pb-2
+         mb-14">
           My Writings
         </h2>
         <div className="space-y-6">
@@ -34,12 +37,14 @@ const Blogs = () => {
             <a
               key={idx}
               href={post.link}
-              className="flex justify-between items-center p-4 rounded-lg hover:bg-gray-200 dark:hover:bg-zinc-900 transition group"
+              className="flex justify-between items-center p-4 rounded-lg hover:bg-gray-200 
+              dark:hover:bg-zinc-800 transition group"
             >
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 group-hover:underline">
+                <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 
+                group-hover:underline">
                   {post.title}
-                </h3>
+                </h4>
                 <div className="flex justify-between text-sm text-gray-500 mt-1">
                   <span>{post.date}</span>
                   <span className="flex items-center gap-1">

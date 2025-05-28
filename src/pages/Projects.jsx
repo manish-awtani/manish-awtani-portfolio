@@ -129,15 +129,23 @@ const Projects = () => {
   //   </>
   // );
   return (
-    <section className="w-full max-w-screen-xl items-start text-left mx-auto px-4 md:px-10 py-16">
-      <h2 className="text-5xl font-bold mb-8">Projects</h2>
+    <section
+    id="projects" 
+    //  max-w-screen-lg 
+    className="min-h-screen w-full max-w-[1090px] items-start text-left mx-auto px-4 md:px-10 py-16"
+    >
+      <div className="max-w-5xl w-full font-inter text-gray-700 dark:text-gray-300 leading-relaxed"> 
+      <h2 className="text-5xl font-bold font-gabarito text-gray-800 dark:text-gray-200 border-b-4 border-pink-500
+      w-fit pb-2 mb-14"
+      // border-blue-500
+      >Projects</h2> 
       <div
         className="flex flex-col md:flex-row gap-10"
         onMouseLeave={handleMouseLeave}
         // onMouseLeave={() => !isMobile && setActiveProject(null)}
       >
         {/* Left: Project List */}
-        <div className="space-y-4 flex-1 ">
+        <div className="space-y-4 flex-1 text-gray-700 dark:text-gray-300">
           {projectsData.map((project, index) => (
             <div
               key={index}
@@ -158,7 +166,7 @@ const Projects = () => {
               <Collapsible
                 title={project.title}
                 year={project.year}
-                description="A real-time chat application built using Flutter and Firebase."
+                description={project.description}
                 githubLink="https://github.com/your/chat-app"
                 projectLink="https://yourapp.com"
               />
@@ -185,7 +193,7 @@ const Projects = () => {
           //   />
           // </div>
           <div
-            className={`transition-transform duration-300 ease-out`}
+            className={`transition-transform duration-300 ease-out text-gray-700 dark:text-gray-300`}
             style={{ transform: getSimulatorTransform() }}
           >
             {activeProject.simulatorType === "mobile" ? (
@@ -235,6 +243,7 @@ const Projects = () => {
           </div>
         </div>
       )}
+      </div>
     </section>
   );
 };
