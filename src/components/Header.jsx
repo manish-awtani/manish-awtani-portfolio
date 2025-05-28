@@ -5,20 +5,20 @@ import ThemeToggle from "./ThemeToggle";
 import confetti from "canvas-confetti";
 import { Menu, X } from "lucide-react"; // If using Lucide icons (or use any hamburger SVG)
 
-const clickSound = new Audio("/public/mixkit-fast-double-click-on-mouse-275.wav");
+const clickSound = new Audio("/mixkit-fast-double-click-on-mouse-275.wav");
 // const clickSound = new Audio("public/mixkit-click-error-1110.wav");
 // const clickSound = new Audio("public/mixkit-sci-fi-click-900.wav");
 // const clickSound = new Audio("public/mixkit-sci-fi-interface-robot-click-901.wav");
 
 const avatarImages = [
-  "src/assets/avatars/mani-1.jpg",
-  "src/assets/avatars/manish-2.png",
-  "src/assets/avatars/mani-3.png",
-  "src/assets/avatars/mani-4.png",
-  "src/assets/avatars/mani-5.png",
-  "src/assets/avatars/mani-6.png",
-  "src/assets/avatars/chill-guy.jpeg",
-  "src/assets/avatars/duck.jpeg",
+  "/avatars/mani-1.jpg",
+  "/avatars/manish-2.png",
+  "/avatars/mani-3.png",
+  "/avatars/mani-4.png",
+  "/avatars/mani-5.png",
+  "/avatars/mani-6.png",
+  "/avatars/chill-guy.jpeg",
+  "/avatars/duck.jpeg",
 ];
 
 const Header = () => {
