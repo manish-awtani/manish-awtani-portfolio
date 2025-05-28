@@ -8,7 +8,8 @@ const Projects = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [hoverDirection, setHoverDirection] = useState(null);
   const [lastMousePos, setLastMousePos] = useState({ x: 0, y: 0 });
-  
+  const [expandedProjectTitle, setExpandedProjectTitle] = useState(null);
+
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
@@ -18,7 +19,8 @@ const Projects = () => {
 
   const handleProjectClick = (project) => {
     if (isMobile) {
-      setActiveProject(project); // Show simulator
+      setActiveProject(project);     setExpandedProjectTitle(project.title); // open collapsible when project selected
+      // Show simulator
     } else {
       window.open(project.link, "_blank"); // Redirect on desktop
     }
@@ -225,21 +227,36 @@ const Projects = () => {
 
       {/* Mobile Simulator Modal */}
       {isMobile && activeProject && (
-        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-          <div className="relative w-[90%] max-w-xs h-[500px] bg-black rounded-[2rem] overflow-hidden shadow-2xl">
-            <button
-              onClick={() => setActiveProject(null)}
-              className="absolute top-2 right-4 text-white text-2xl font-light"
-            >
-              &times;
-            </button>
-            <video
-              src={activeProject.video}
-              autoPlay
-              muted
-              loop
-              className="w-full h-full object-cover"
-            />
+        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"> 
+          <div className="flex flex-col items-center">
+            <div className="relative w-[90%] max-w-xs h-[500px] bg-black rounded-[2rem] overflow-hidden shadow-2xl">
+              {/* <button
+                onClick={() => setActiveProject(null)}
+                // className="absolute top-2 right-4 text-white text-2xl font-light"
+                // className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center text-white bg-white/60 hover:bg-white/70 rounded-full text-base z-10"
+                className="absolute top-3 right-3 w-8 h-8 bg-black text-white text-xl flex items-center justify-center rounded-full text-base z-10"
+
+              >
+                &times;
+              </button> */}
+              <video
+                src={activeProject.video}
+                autoPlay
+                muted
+                loop
+                className="w-full h-full object-cover"
+              />
+            </div>
+              
+      {/* Close button below video */}
+      <button
+        onClick={() => {setActiveProject(null)
+          setExpandedProjectTitle(null); 
+        }}
+        className="mt-4 w-10 h-10 bg-white dark:bg-black text-black dark:text-white rounded flex items-center justify-center text-lg shadow-md"
+      >
+        ✖
+      </button>
           </div>
         </div>
       )}
