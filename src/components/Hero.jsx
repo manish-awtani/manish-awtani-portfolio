@@ -46,7 +46,7 @@ const Hero = () => {
               <FaLinkedinIn size={24} />
             </a>
             <a
-              href="https://twitter.com/yourusername"
+              href="https://x.com/manishunleashed"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition" // hover:text-sky-500 dark:hover:text-sky-400
