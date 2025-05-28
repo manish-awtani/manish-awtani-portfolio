@@ -54,7 +54,7 @@ const masonryItems = [
 
   {
     title: "DUCK",
-    image: "assets/avatars/duck.jpeg",
+    image: "avatars/duck.jpeg",
     category: "Event",
     description: "My signature dish — cooked from scratch!",
   },
