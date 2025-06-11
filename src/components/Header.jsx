@@ -3,7 +3,7 @@ import React, { useRef, useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 import confetti from "canvas-confetti";
-import { Menu, X } from "lucide-react"; // If using Lucide icons (or use any hamburger SVG)
+import { Menu, MenuIcon, X } from "lucide-react"; // If using Lucide icons (or use any hamburger SVG)
 
 const clickSound = new Audio("/mixkit-fast-double-click-on-mouse-275.wav");
 // const clickSound = new Audio("public/mixkit-click-error-1110.wav");
@@ -156,19 +156,19 @@ const Header = () => {
               ref={menuButtonRef}
               onClick={() => setMenuOpen(!menuOpen)}
               //   className="w-10 h-10 flex items-center justify-center text-black dark:text-white bg-white dark:bg-zinc-900 border border-white rounded-lg"
-              className="w-10 h-10 flex items-center justify-center bg-white dark:bg-zinc-900
-              text-zinc-900 dark:text-white border border-zinc-300 dark:border-zinc-700 
-                rounded-lg transition-colors"
+              className="w-11 h-11 flex items-center justify-center bg-white dark:bg-zinc-900
+              text-zinc-900 dark:text-white  
+                rounded-lg transition-colors overflow-hidden p-0"
             >
               {menuOpen ? (
                 <X
                   size={24}
-                  className="text-black dark:text-white  hover:text-gray-400 transition"
+                  className="text-black dark:text-white  hover:text-gray-400 transition duration-500"
                 />
               ) : (
                 <Menu
                   size={24}
-                  className="text-black dark:text-white hover:text-gray-400 transition"
+                  className="text-black dark:text-white hover:text-gray-400 transition duration-500"
                 />
               )}
             </button>
