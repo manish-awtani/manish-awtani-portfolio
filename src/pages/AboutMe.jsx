@@ -57,7 +57,7 @@ const AboutMe = () => {
             />
           </div>
         </div>
-        <div className="mt-14 space-y-6 w-full">
+        <div id="contact" className="mt-14 space-y-6 w-full">
           <h3 className="text-4xl font-bold font-gabarito text-gray-700 dark:text-gray-300 mb-4">
             Contact
           </h3>

@@ -6,7 +6,7 @@ const BottomNav = () => {
     { label: "Projects", icon: "📁", to: "/projects" },
     { label: "Blogs", icon: "✍️", to: "/blogs" },
     { label: "Experience", icon: "💼", to: "/experience" },
-    { label: "Contact", icon: "📬", to: "/contact" },
+    { label: "AboutMe", icon: "📬", to: "/aboutme" },
   ];
 
   return (

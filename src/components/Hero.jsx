@@ -54,7 +54,7 @@ const Hero = () => {
               <FaXTwitter size={24} />
             </a>
             <a
-              href="https://twitter.com/yourusername"
+              href="https://medium.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition" // hover:text-sky-500 dark:hover:text-sky-400
@@ -120,7 +120,7 @@ const Hero = () => {
           <p className="text-lg">
             Interested in collaborating or chatting about an idea?{" "}
             <a
-              href="aboutme"
+              href="/aboutme#contact"
               className="text-pink-500 hover:underline inline-flex items-center gap-1"
             >
               Let’s talk
@@ -136,7 +136,7 @@ const Hero = () => {
             engineering.
           </p>
           <a
-            href="/blog/math-secret-weapon"
+            href="/blogs"
             className="text-pink-500 dark:text-pink-500 font-medium hover:underline"
           >
             Read More
