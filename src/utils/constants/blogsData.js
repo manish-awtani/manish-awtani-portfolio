@@ -1,9 +1,10 @@
 const blogPosts = [
   {
+    id: "math-secret-weapon",
     title: "Why Math is the Secret Weapon of Great Developers!",
     date: "June 29, 2024",
     views: 2513,
-    link: "/blog/hello-world",
+    link: "/blog/math-secret-weapon",
     content: `
     You hear it all the time: “You don’t need math to code.” And to be fair, that’s true—at least at the start. You can build websites, write APIs, even automate tasks without touching much math at all. But if you want to go from capable to exceptional as a developer, math quietly becomes your secret weapon.
 
