@@ -5,6 +5,8 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { dinoGame } from "../utils/common";
 import MasonaryGrid from "./MasonaryGrid";
 import { FiArrowRight, FiArrowRightCircle, FiArrowUpLeft, FiArrowUpRight } from "react-icons/fi";
+import blogPosts from "../utils/constants/blogsData";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   useEffect(() => {
@@ -119,24 +121,24 @@ const Hero = () => {
         <div className="mt-8 text-center font-inter">
           <p className="text-lg">
             Interested in collaborating or chatting about an idea?{" "}
-            <a
-              href="/aboutme#contact"
+            <Link
+              to="/aboutme#contact"
               className="text-pink-500 hover:underline inline-flex items-center gap-1"
             >
               Let’s talk
               <FiArrowRight className="inline-block transform rotate-[320deg]" />
-            </a>
+            </Link>
           </p>
         </div>
         <div className="mt-8 bg-gray-100 dark:bg-zinc-900 text-zinc-900 dark:text-white p-6 rounded-lg shadow w-full font-inter">
           <h3 className="text-xl font-bold mb-2">Latest Blog Post</h3>
           <p className="text-gray-700 dark:text-gray-300 mb-4">
-            “Why Math is the Secret Weapon of Great Developers” – I explore how
+            "{blogPosts[0].title}" – I explore how
             core math concepts empower elegant problem solving in software
             engineering.
           </p>
           <a
-            href="/blogs"
+            href={blogPosts[0].link}
             className="text-pink-500 dark:text-pink-500 font-medium hover:underline"
           >
             Read More
