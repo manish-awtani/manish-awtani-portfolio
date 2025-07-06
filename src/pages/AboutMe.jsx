@@ -51,7 +51,7 @@ const AboutMe = () => {
           {/* Image on the right */}
           <div className="md:w-1/3 w-full flex justify-center md:justify-end">
             <img
-              src="avatars/mani-3.png"
+              src="https://ik.imagekit.io/maniii09/mani-3.png?updatedAt=1751536535496"
               alt="Manish's photo"
               className="rounded-xl shadow-lg max-w-sm w-full object-cover"
             />

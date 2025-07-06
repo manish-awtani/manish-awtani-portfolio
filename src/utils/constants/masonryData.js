@@ -2,20 +2,20 @@ const masonryItems = [
   // 1
   {
     title: "Mani Buddha Husky",
-    image: "assets/masonry-images/mani-husky.png",
+    image: "https://ik.imagekit.io/maniii09/home-screen-images/mani-buddha-husky.png?updatedAt=1751791952143",
     category: "Photography",
     description: "My signature dish — cooked from scratch!",
   },
 
   {
     title: "Dum Biryani 🍛",
-    image: "assets/masonry-images/mani-back-kedarkantha.JPG",
+    image: "https://ik.imagekit.io/maniii09/home-screen-images/mani-back-kedarkantha.JPG?updatedAt=1751791765858",
     category: "Hobby",
     description: "My signature dish — cooked from scratch!",
   },
   {
     title: "Yamnotri",
-    image: "assets/masonry-images/yamnotri.png",
+    image: "https://ik.imagekit.io/maniii09/home-screen-images/yamnotri.png?updatedAt=1751791953482",
     category: "Art",
     description: "My signature dish — cooked from scratch!",
   },
@@ -27,26 +27,26 @@ const masonryItems = [
   // },
   {
     title: "Mani Yoga Yamnotri",
-    image: "assets/masonry-images/mani-yoga-ganga.png",
+    image: "https://ik.imagekit.io/maniii09/home-screen-images/mani-yoga-ganga.png?updatedAt=1751791962795",
     category: "Art",
     description: "My signature dish — cooked from scratch!",
   },
 
   {
     title: "Kedarkantha",
-    image: "assets/masonry-images/kedarkantha-night.JPG",
+    image: "https://ik.imagekit.io/maniii09/home-screen-images/kedarkantha-night.JPG?updatedAt=1751791741406",
     category: "Event",
     description: "My signature dish — cooked from scratch!",
   },
   {
     title: "Mani Standing Ganga",
-    image: "assets/masonry-images/mani-standing-ganga.png",
+    image: "https://ik.imagekit.io/maniii09/home-screen-images/mani-standing-ganga.png?updatedAt=1751791938409",
     category: "Photography",
     description: "My signature dish — cooked from scratch!",
   },
   {
     title: "Yamnotri",
-    image: "assets/masonry-images/mani-back-achieved.JPG",
+    image: "https://ik.imagekit.io/maniii09/home-screen-images/mani-back-achieved.JPG?updatedAt=1751791763803",
     category: "Art",
     description: "My signature dish — cooked from scratch!",
   },
@@ -54,13 +54,13 @@ const masonryItems = [
 
   {
     title: "DUCK",
-    image: "avatars/duck.jpeg",
+    image: "https://ik.imagekit.io/maniii09/duck.jpeg?updatedAt=1751791488858",
     category: "Event",
     description: "My signature dish — cooked from scratch!",
   },
   {
     title: "Kedarkantha",
-    image: "assets/masonry-images/kedarkantha.png",
+    image: "https://ik.imagekit.io/maniii09/home-screen-images/kedarkantha.png?updatedAt=1751791811049",
     category: "Event",
     description: "My signature dish — cooked from scratch!",
   },
