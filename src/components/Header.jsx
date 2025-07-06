@@ -11,14 +11,14 @@ const clickSound = new Audio("/mixkit-fast-double-click-on-mouse-275.wav");
 // const clickSound = new Audio("public/mixkit-sci-fi-interface-robot-click-901.wav");
 
 const avatarImages = [
-  "/avatars/mani-1.jpg",
-  "/avatars/manish-2.png",
-  "/avatars/mani-3.png",
-  "/avatars/mani-4.png",
-  "/avatars/mani-5.png",
-  "/avatars/mani-6.png",
-  "/avatars/chill-guy.jpeg",
-  "/avatars/duck.jpeg",
+  "https://ik.imagekit.io/maniii09/mani-1.jpg?updatedAt=1751536489676",
+  "https://ik.imagekit.io/maniii09/manish-2.png?updatedAt=1751536568343",
+  "https://ik.imagekit.io/maniii09/mani-3.png?updatedAt=1751536535496",
+  "https://ik.imagekit.io/maniii09/mani-4.png?updatedAt=1751536552638",
+  "https://ik.imagekit.io/maniii09/mani-5.png?updatedAt=1751536563680",
+  "https://ik.imagekit.io/maniii09/mani-6.png?updatedAt=1751536539236",
+  "https://ik.imagekit.io/maniii09/chill-guy.jpeg?updatedAt=1751536486641",
+  "https://ik.imagekit.io/maniii09/duck.jpeg?updatedAt=1751536488858",
 ];
 
 const Header = () => {

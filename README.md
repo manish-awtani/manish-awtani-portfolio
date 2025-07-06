@@ -1,12 +1,61 @@
-# React + Vite
+# Manish Awtani Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio website built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dark/Light Mode Toggle**: Seamless theme switching
+- **Responsive Design**: Optimized for desktop and mobile devices
+- **Interactive Project Showcase**: Hover effects and video previews with loading states
+- **Blog System**: Markdown-based blog posts with syntax highlighting
+- **Smooth Animations**: Enhanced user experience with Framer Motion
+- **Video Loading**: Custom video loader component with progress indicators
 
-## Expanding the ESLint configuration
+## Components
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### VideoWithLoader
+A custom component that wraps video elements with loading states:
+
+- **Loading Spinner**: Animated spinner while video loads
+- **Progress Bar**: Shows buffering progress
+- **Error Handling**: Graceful fallback for failed video loads
+- **Auto-reset**: Resets loading state when video source changes
+
+```jsx
+<VideoWithLoader
+  src="path/to/video.mp4"
+  className="w-full h-full object-cover"
+  autoPlay={true}
+  muted={true}
+  loop={true}
+/>
+```
+
+## Tech Stack
+
+- **React 19**: Latest React with hooks
+- **Vite**: Fast build tool and dev server
+- **Tailwind CSS**: Utility-first CSS framework
+- **React Router**: Client-side routing
+- **Framer Motion**: Animation library
+- **React Icons**: Icon library
+- **Lucide React**: Additional icons
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. Start development server: `npm run dev`
+4. Build for production: `npm run build`
+
+## Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+├── pages/              # Page components
+├── layouts/            # Layout components
+├── utils/              # Utility functions and constants
+├── theme/              # Theme configuration
+└── styles/             # Global styles
+```
