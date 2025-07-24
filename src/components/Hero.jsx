@@ -55,13 +55,27 @@ const Hero = () => {
             >
               <FaXTwitter size={24} />
             </a>
-            <a
+            {/* <a
               href="https://medium.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition" // hover:text-sky-500 dark:hover:text-sky-400
             >
               <FaMedium size={24} />
+            </a> */}
+            <a
+              href="https://leetcode.com/u/manishawtani01/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition group"
+              aria-label="LeetCode"
+            >
+              <img
+                src="/assets/logos/leetcode.svg"
+                alt="LeetCode"
+                className="w-6 h-6 filter grayscale group-hover:filter-none transition duration-200"
+                style={{ display: 'block' }}
+              />
             </a>
             {/* <a
               href="https://github.com/yourusername"
