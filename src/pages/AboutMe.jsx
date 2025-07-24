@@ -77,6 +77,16 @@ const AboutMe = () => {
             </li>
             <li>
               <a
+                href="https://leetcode.com/u/manishawtani01/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-blue-500"
+              >
+                Leetcode
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://github.com/manish-awtani"
                 target="_blank"
                 rel="noopener noreferrer"
