@@ -20,10 +20,11 @@ const Experience = () => {
     >
       <div className="max-w-4xl w-full font-inter flex flex-col items-start text-left gap-4 
       text-gray-700 dark:text-gray-300 leading-relaxed">
-        <h2 className="text-5xl font-bold font-gabarito text-gray-800 dark:text-gray-200 border-b-4 border-pink-500 
-        w-fit pb-2 ">
-          Work
-        </h2>
+        <div className="flex flex-row items-center gap-4 w-full mb-2">
+          <h2 className="text-5xl font-bold font-gabarito text-gray-800 dark:text-gray-200 border-b-4 border-pink-500 w-fit pb-2 m-0">
+            Work
+          </h2>
+        </div>
 
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
           My professional journey so far
@@ -53,7 +54,27 @@ const Experience = () => {
           applications. I’m the "tech guy" in the family, the one friends call
           when something’s broken — or when they want to build something big.
         </p>
-        <h3 className="mt-10 text-4xl text-gray-800 dark:text-gray-200 font-bold mb-2">Experience</h3>
+        <h3 className="mt-10 text-4xl text-gray-800 dark:text-gray-200 font-bold mb-2 flex items-center gap-3">
+          Experience
+          <a
+            href="https://drive.google.com/file/d/1HQxGzCjId_vt5YPubE7umseLQtUyxdql/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="View Resume"
+            className="inline-block align-middle transition-transform duration-200 hover:scale-110 hover:drop-shadow-lg no-underline"
+            style={{ textDecoration: 'none', marginLeft: '10px' }}
+          >
+            <div className="relative flex flex-col items-center">
+              <img
+                src="/assets/logos/resume-icon.svg"
+                alt="Resume Icon"
+                className="w-10 h-10 filter grayscale dark:opacity-40 opacity-60 hover:filter-none dark:hover:opacity-100 hover:opacity-100 transition duration-200"
+              />
+              {/* <span className="block w-10 h-0.5 bg-blue-400 rounded-full mt-1"></span> */}
+
+            </div>
+          </a>
+        </h3>
 
         <div className="w-full text-left text-lg text-gray-700 dark:text-gray-300 leading-relaxed 
         space-y-10">
@@ -66,7 +87,7 @@ const Experience = () => {
               <div className="flex justify-between items-center flex-wrap mb-3">
                 <div className="flex items-center gap-2">
                   <img
-                    src="src/assets/logos/srkay-logo.png"
+                    src="public/assets/logos/srkay-logo.png"
                     alt="GTU"
                     className="h-7 w-7 object-contain"
                   />
@@ -112,7 +133,7 @@ const Experience = () => {
               <div className="flex justify-between items-center flex-wrap mb-3">
                 <div className="flex items-center gap-2">
                   <img
-                    src="src/assets/logos/gtu-logo.png"
+                    src="public/assets/logos/gtu-logo.png"
                     alt="GTU"
                     className="h-6 w-6 object-contain"
                   />

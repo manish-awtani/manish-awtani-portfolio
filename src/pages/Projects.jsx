@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Collapsible from "../components/Collapsible";
 import projectsData from "../utils/constants/projectsData";
+import VideoWithLoader from "../components/VideoWithLoader";
 
 const Projects = () => {
   const [activeProject, setActiveProject] = useState(null);
@@ -200,23 +201,17 @@ const Projects = () => {
           >
             {activeProject.simulatorType === "mobile" ? (
               <div className="relative w-72 h-[550px] rounded-[2rem] border border-gray-700 overflow-hidden shadow-lg">
-                <video
+                <VideoWithLoader
                   key={activeProject.video}
                   src={activeProject.video}
-                  autoPlay
-                  muted
-                  loop
                   className="w-full h-full object-cover"
                 />
               </div>
             ) : (
               <div className="relative w-[640px] h-[360px] rounded-xl border border-gray-700 overflow-hidden shadow-lg">
-                <video
+                <VideoWithLoader
                   key={activeProject.video}
                   src={activeProject.video}
-                  autoPlay
-                  muted
-                  loop
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -239,11 +234,8 @@ const Projects = () => {
               >
                 &times;
               </button> */}
-              <video
+              <VideoWithLoader
                 src={activeProject.video}
-                autoPlay
-                muted
-                loop
                 className="w-full h-full object-cover"
               />
             </div>

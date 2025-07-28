@@ -11,14 +11,14 @@ const clickSound = new Audio("/mixkit-fast-double-click-on-mouse-275.wav");
 // const clickSound = new Audio("public/mixkit-sci-fi-interface-robot-click-901.wav");
 
 const avatarImages = [
-  "/avatars/mani-1.jpg",
-  "/avatars/manish-2.png",
-  "/avatars/mani-3.png",
-  "/avatars/mani-4.png",
-  "/avatars/mani-5.png",
-  "/avatars/mani-6.png",
-  "/avatars/chill-guy.jpeg",
-  "/avatars/duck.jpeg",
+  "https://ik.imagekit.io/maniii09/mani-1.jpg?updatedAt=1751536489676",
+  "https://ik.imagekit.io/maniii09/manish-2.png?updatedAt=1751536568343",
+  "https://ik.imagekit.io/maniii09/mani-3.png?updatedAt=1751536535496",
+  "https://ik.imagekit.io/maniii09/mani-4.png?updatedAt=1751536552638",
+  "https://ik.imagekit.io/maniii09/mani-5.png?updatedAt=1751536563680",
+  "https://ik.imagekit.io/maniii09/mani-6.png?updatedAt=1751536539236",
+  "https://ik.imagekit.io/maniii09/chill-guy.jpeg?updatedAt=1751536486641",
+  "https://ik.imagekit.io/maniii09/duck.jpeg?updatedAt=1751536488858",
 ];
 
 const Header = () => {
@@ -31,6 +31,7 @@ const Header = () => {
   const menuButtonRef = useRef(null);
   const navigate = useNavigate(); // react-router navigation
   const navItems = [ "Experience","Projects", "Blogs", "About Me"];
+  const resumeLink = "https://drive.google.com/file/d/1HQxGzCjId_vt5YPubE7umseLQtUyxdql/view?usp=drive_link"; // TODO: Replace with your actual resume link
 
   useEffect(() => {
     avatarImages.forEach((src) => {
@@ -136,6 +137,16 @@ const Header = () => {
         <div className="flex items-center space-x-4">
           {/* Desktop Nav */}
           <div className="hidden sixty:flex space-x-6">
+            {/* Resume Button */}
+            {/* <a
+              href={resumeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-lg font-semibold px-4 py-1 rounded-md flex items-center justify-center transition-all duration-200 border-2 border-black dark:border-black bg-zinc-900 text-white dark:bg-white dark:text-black hover:bg-zinc-900 dark:hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-pink-400 hover:ring-2 hover:ring-pink-400 mr-2"
+              style={{ fontFamily: 'inherit' }}
+            >
+              Resume
+            </a> */}
             {navItems.map((item) => (
               <button
                 key={item}
@@ -144,7 +155,6 @@ const Header = () => {
                 }
                 className="text-lg font-semibold bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white 
                   transition-colors duration-200 hover:text-pink-500 dark:hover:text-pink-500"
-                // className="block w-full text-left px-4 py-2 text-zinc-900 dark:text-white text-lg font-semibold transition-colors duration-200 hover:text-pink-500"
               >
                 {item}
               </button>
@@ -186,6 +196,16 @@ const Header = () => {
             transition-colors duration-300"
           ref={menuRef}
         >
+          {/* Resume Button for Mobile */}
+          <a
+            href={resumeLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full text-left px-4 py-2 mb-2 rounded-md font-semibold transition-all duration-200 border-2 border-black dark:border-black bg-black text-white dark:bg-white dark:text-black hover:bg-zinc-900 dark:hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-pink-400  hover:bg-zinc-900 dark:hover:bg-zinc-100 focus:outline-none focus:ring-2 focus:ring-pink-400 hover:ring-2 hover:ring-pink-400"
+            style={{ fontFamily: 'inherit' }}
+          >
+            Resume
+          </a>
           {navItems.map((item) => (
             <button
               key={item}

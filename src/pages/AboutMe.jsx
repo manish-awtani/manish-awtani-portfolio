@@ -51,7 +51,7 @@ const AboutMe = () => {
           {/* Image on the right */}
           <div className="md:w-1/3 w-full flex justify-center md:justify-end">
             <img
-              src="avatars/mani-3.png"
+              src="https://ik.imagekit.io/maniii09/mani-3.png?updatedAt=1751536535496"
               alt="Manish's photo"
               className="rounded-xl shadow-lg max-w-sm w-full object-cover"
             />
@@ -73,6 +73,16 @@ const AboutMe = () => {
                 className="underline hover:text-blue-500"
               >
                 manishawtani01@gmail.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://leetcode.com/u/manishawtani01/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-blue-500"
+              >
+                Leetcode
               </a>
             </li>
             <li>

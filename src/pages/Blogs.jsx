@@ -1,229 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FiArrowDownLeft, FiArrowDownRight, FiArrowUpRight, FiChevronDown, FiChevronUp } from "react-icons/fi";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import blogPosts from "../utils/constants/blogsData";
+import { Link } from "react-router-dom";
+import { renderContent, incrementViewCount, getViewCount } from "../utils/blogUtils.jsx";
 
 const Blogs = () => {
   const [openIndex, setOpenIndex] = useState(null);
+  const [viewCounts, setViewCounts] = useState({});
+
+  // Load view counts on component mount
+  useEffect(() => {
+    const counts = {};
+    blogPosts.forEach(post => {
+      const baseCount = post.views || 0;
+      const dynamicCount = getViewCount(post.id);
+      counts[post.id] = baseCount + dynamicCount;
+    });
+    setViewCounts(counts);
+  }, []);
 
   const togglePost = (index) => {
+    const post = blogPosts[index];
+    if (openIndex !== index) {
+      // Only increment if this is the first time opening this post in this session
+      const sessionKey = `blog_session_${post.id}`;
+      if (!sessionStorage.getItem(sessionKey)) {
+        const newCount = incrementViewCount(post.id);
+        const baseCount = post.views || 0;
+        setViewCounts(prev => ({
+          ...prev,
+          [post.id]: baseCount + newCount
+        }));
+        sessionStorage.setItem(sessionKey, 'true');
+      }
+    }
     setOpenIndex(openIndex === index ? null : index);
   };
-  // Function to beautify and render blog content
-  // const renderContent = (rawText) => {
-  //   return rawText
-  //     .split("\n")
-  //     .filter((line) => line.trim() !== "")
-  //     .map((line, i) => {
-  //       const trimmed = line.trim();
-  //       if (trimmed.startsWith("**") && trimmed.endsWith("**")) {
-  //         return (
-  //           <h3
-  //             key={i}
-  //             className="text-xl font-bold text-gray-800 dark:text-gray-200 mt-6 mb-2"
-  //           >
-  //             {trimmed.slice(2, -2)}
-  //           </h3>
-  //         );
-  //       } else {
-  //         return (
-  //           <p key={i} className="text-gray-600 dark:text-gray-400 mb-3">
-  //             {trimmed}
-  //           </p>
-  //         );
-  //       }
-  //     });
-  // };
-  // const renderContent = (rawText) => {
-  //   const lines = rawText.split("\n").filter((line) => line.trim() !== "");
-
-  //   const elements = [];
-  //   let currentList = [];
-
-  //   lines.forEach((line, i) => {
-  //     const trimmed = line.trim();
-
-  //     // Heading
-  //     if (trimmed.startsWith("**") && trimmed.endsWith("**")) {
-  //       // Push pending list if exists
-  //       if (currentList.length > 0) {
-  //         elements.push(
-  //           <ul
-  //             key={`list-${i}`}
-  //             className="list-disc pl-6 text-gray-700 dark:text-gray-300 mb-3"
-  //           >
-  //             {currentList.map((item, idx) => (
-  //               <li key={idx}>{item}</li>
-  //             ))}
-  //           </ul>
-  //         );
-  //         currentList = [];
-  //       }
-
-  //       elements.push(
-  //         <h3
-  //           key={`heading-${i}`}
-  //           className="text-xl font-bold text-red-400 mt-6 mb-2"
-  //         >
-  //           {trimmed.slice(2, -2)}
-  //         </h3>
-  //       );
-  //     }
-  //     // Bullet point
-  //     else if (trimmed.startsWith("- ")) {
-  //       currentList.push(trimmed.slice(2));
-  //     }
-  //     // Paragraph
-  //     else {
-  //       // Push pending list if exists
-  //       if (currentList.length > 0) {
-  //         elements.push(
-  //           <ul
-  //             key={`list-${i}`}
-  //             className="list-disc pl-6 text-gray-700 dark:text-gray-300 mb-3"
-  //           >
-  //             {currentList.map((item, idx) => (
-  //               <li key={idx}>{item}</li>
-  //             ))}
-  //           </ul>
-  //         );
-  //         currentList = [];
-  //       }
-
-  //       elements.push(
-  //         <p
-  //           key={`para-${i}`}
-  //           className="text-gray-700 dark:text-gray-300 mb-3 text-justify"
-  //         >
-  //           {trimmed}
-  //         </p>
-  //       );
-  //     }
-  //   });
-
-  //   // Flush any remaining list items
-  //   if (currentList.length > 0) {
-  //     elements.push(
-  //       <ul
-  //         key={`list-end`}
-  //         className="list-disc pl-6 text-gray-700 dark:text-gray-300 mb-3"
-  //       >
-  //         {currentList.map((item, idx) => (
-  //           <li key={idx}>{item}</li>
-  //         ))}
-  //       </ul>
-  //     );
-  //   }
-
-  //   return elements;
-  // };
-
-const renderContent = (rawText) => {
-  const lines = rawText.split("\n");
-
-  const elements = [];
-  let currentList = [];
-  let insideCodeBlock = false;
-  let codeLanguage = "";
-  let codeLines = [];
-
-  lines.forEach((line, i) => {
-    const trimmed = line.trim();
-
-    // Handle code block start
-    if (trimmed.startsWith("```")) {
-      if (!insideCodeBlock) {
-        insideCodeBlock = true;
-        codeLanguage = trimmed.slice(3).trim(); // language name after ```
-        codeLines = [];
-      } else {
-        // End of code block
-        insideCodeBlock = false;
-        elements.push(
-          <div key={`code-${i}`} className="my-4">
-            <SyntaxHighlighter language={codeLanguage} style={atomOneDark} customStyle={{ borderRadius: "0.5rem", fontSize: "0.9rem" }}>
-              {codeLines.join("\n")}
-            </SyntaxHighlighter>
-          </div>
-        );
-        codeLanguage = "";
-        codeLines = [];
-      }
-      return;
-    }
-
-    if (insideCodeBlock) {
-      codeLines.push(line);
-      return;
-    }
-
-    // Handle headings
-    if (trimmed.startsWith("**") && trimmed.endsWith("**")) {
-      if (currentList.length > 0) {
-        elements.push(
-          <ul key={`list-${i}`} className="list-disc pl-6 text-gray-700 dark:text-gray-300 mb-3">
-            {currentList.map((item, idx) => <li key={idx}>{item}</li>)}
-          </ul>
-        );
-        currentList = [];
-      }
-      elements.push(
-        <h3 key={`heading-${i}`} className="text-xl font-bold text-red-400 mt-6 mb-2">
-          {trimmed.slice(2, -2)}
-        </h3>
-      );
-      return;
-    }
-
-    // Handle bullet points
-    if (trimmed.startsWith("- ")) {
-      currentList.push(trimmed.slice(2));
-      return;
-    }
-
-    // Handle paragraph
-    if (currentList.length > 0) {
-      elements.push(
-        <ul key={`list-${i}`} className="list-disc pl-6 text-gray-700 dark:text-gray-300 mb-3">
-          {currentList.map((item, idx) => <li key={idx}>{item}</li>)}
-        </ul>
-      );
-      currentList = [];
-    }
-
-    // Handle inline code (single *)
-    const paragraphWithInlineCode = trimmed.split(/(\*.*?\*)/).map((part, idx) => {
-      if (part.startsWith("*") && part.endsWith("*")) {
-        return (
-          <span key={idx} className="bg-gray-200 dark:bg-gray-700 px-1 py-0.5 rounded text-sm mx-0.5">
-            {part.slice(1, -1)}
-          </span>
-        );
-      } else {
-        return part;
-      }
-    });
-
-    elements.push(
-      <p key={`para-${i}`} className="text-gray-700 dark:text-gray-300 mb-3 text-justify">
-        {paragraphWithInlineCode}
-      </p>
-    );
-  });
-
-  // Flush any remaining list items
-  if (currentList.length > 0) {
-    elements.push(
-      <ul key={`list-end`} className="list-disc pl-6 text-gray-700 dark:text-gray-300 mb-3">
-        {currentList.map((item, idx) => <li key={idx}>{item}</li>)}
-      </ul>
-    );
-  }
-
-  return elements;
-};
-  
 
   return (
     // min-h-screen
@@ -271,12 +83,12 @@ const renderContent = (rawText) => {
             >
               <div className="flex justify-between items-center">
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-200 group-hover:underline">
+                  <Link to={post.link} className="text-lg font-semibold text-gray-800 dark:text-gray-200 group-hover:underline">
                     {post.title}
-                  </h4>
+                  </Link>
                   <div className="flex justify-between text-sm text-gray-500 mt-1">
                     <span>{post.date}</span>
-                    <span>{post.views.toLocaleString()} views</span>
+                    <span>{(viewCounts[post.id] || 0).toLocaleString()} views</span>
                   </div>
                 </div>
                 {openIndex === idx ? (

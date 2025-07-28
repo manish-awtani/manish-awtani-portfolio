@@ -9,6 +9,7 @@ import AboutMe from "./pages/AboutMe";
 import Blogs from "./pages/Blogs";
 import Experience from "./pages/Experience";
 import CursorTrail from "./components/CursorTrail";
+import BlogPost from "./pages/BlogPost";
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="/aboutme" element={<AboutMe />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/experience" element={<Experience />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
         </Routes>
       </MainLayout>
     </Router>
