@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import Collapsible from "../components/Collapsible";
-import projectsData from "../utils/constants/projectsData";
+import {projectsData} from "../utils/constants/projectsData"
 import VideoWithLoader from "../components/VideoWithLoader";
 
 const Projects = () => {
@@ -172,6 +172,7 @@ const Projects = () => {
                 description={project.description}
                 githubLink="https://github.com/your/chat-app"
                 projectLink="https://yourapp.com"
+                technologies={project.technologies}
               />
             </div>
           ))}
