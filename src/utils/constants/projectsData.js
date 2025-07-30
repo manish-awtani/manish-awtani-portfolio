@@ -1,11 +1,38 @@
+// tech stacks
+const techStacks = {
+  java: "Java",
+  spring_boot: "Spring Boot",
+  j2ee: "J2EE",
+  react: "React Js",
+  react_native: "React Native",
+  node: "Node Js",
+  express: "Express Js",
+  mongo: "MongoDB",
+  tailwind: "Tailwind CSS",
+  next: "Next Js",
+  ai: "AI/ML",
+  chrome_ext: "Chrome Extension",
+  sql: "SQL",
+  mssql: "MSSQL",
+  postgres: "PostgreSQL",
+  android: "Android",
+  ios: "iOS",
+  mobile_app: "Mobile Application Development",
+  flutter: "Flutter",
+  dart: "Dart",
+  git: "Git",
+  github: "Github",
+};
+
 const projectsData = [
   {
     title: "pure 2.0",
     year: 2024,
-    description: "An ecommerce diamond store",
+    description: "Pure 2.0 is a Diamond ERP inventory application built to manage inventory, sales, and stock tracking efficiently. It supports real-time data handling for millions of diamonds using WebSockets and caching mechanisms to ensure high performance and responsiveness.\n The mobile application is developed using React Native and SQLite, leveraging modern mobile technologies for seamless offline support and smooth user experience. The system also features Business Intelligence (BI) dashboards for data-driven insights and analytics.",
     video: "https://ik.imagekit.io/maniii09/project-videos/pure2.0-2x.mp4?updatedAt=1751792214655",
     simulatorType: "mobile",
     link: "https://github.com/manish-awtani/Gauri-BI-Dashboard",
+    technologies: ["react_native", "node", "mongo"],
   },
   {
     title: "gauri BI",
@@ -57,4 +84,4 @@ const projectsData = [
   // Add more projects
 ];
 
-export default projectsData;
+export { techStacks, projectsData };

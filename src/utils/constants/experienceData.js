@@ -6,12 +6,11 @@ const experienceData = [
     location: "Surat, India",
     period: "May 2023 – Present",
     achievements: [
-      "Migrated a class-based project to functional React Native architecture, integrating 400+ APIs, improving app reliability by 30%.",
-      "Led development of a Native library (Java & Objective-C), boosting app performance by 25%.",
-      "Integrated BI tools (Apache Superset, Power BI, MetaBase) with SQL/PostgreSQL/Cassandra, enabling dashboards without APIs.",
-      "Led a 3-member team to develop a Flutter app with SQLite and WebSocket, optimizing data retrieval by 50%.",
-      "Delivered 4 projects and 35+ user experiences through cross-functional collaboration.",
-      "Built a CI/CD pipeline using Jenkins & Fastlane, saving 100+ developer hours.",
+      "Led a team of 5 to architect and build a offline-first ERP mobile app with real-time data handling using WebSockets, Redux Toolkit, and SQLite, enabling offline insights and improving data retrieval speed by 50% for end users.",
+      "Migrated a legacy class-based React Native codebase to functional components, modularized API architecture, and boosted app reliability by 30% via refactoring, code reviews, and performance optimization within Agile workflows.",
+      "Integrated role-based access control (RBAC) and custom permission s in the mobile ERP suite to secure user actions based on team hierarchy and feature access. Integrated BI tools (Apache Superset, Power BI, MetaBase) with SQL/PostgreSQL/Cassandra, enabling dashboards without APIs.",
+      "Developed reusable native modules in Java (Android) and Objective-C (iOS) for React Native, following clean code and modular design patterns. Optimized UI rendering and threading to reduce frame drops and enhance performance by 35%.",
+      "Designed and implemented a CI/CD pipeline using Jenkins and Fastlane to automate Android/iOS builds, saving 200+ developer hours and eliminated manual errors. Delivered 4 major projects and 35+ user-facing features, driving engagement and scalability through collaboration with stakeholders.",
     ],
     keywords: [
       "React Native",

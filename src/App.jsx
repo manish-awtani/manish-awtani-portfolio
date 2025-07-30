@@ -10,6 +10,7 @@ import Blogs from "./pages/Blogs";
 import Experience from "./pages/Experience";
 import CursorTrail from "./components/CursorTrail";
 import BlogPost from "./pages/BlogPost";
+import AppRoutes from "../routes/AppRoutes";
 
 function App() {
 
@@ -27,14 +28,7 @@ function App() {
     <Router>
       {/* <CursorTrail /> */}
       <MainLayout>
-        <Routes>
-          <Route path="/" element={<Hero />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/aboutme" element={<AboutMe />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-        </Routes>
+        <AppRoutes />
       </MainLayout>
     </Router>
   );

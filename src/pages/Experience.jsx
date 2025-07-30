@@ -77,7 +77,7 @@ const Experience = () => {
         </h3>
 
         <div className="w-full text-left text-lg text-gray-700 dark:text-gray-300 leading-relaxed 
-        space-y-10">
+          space-y-10">
           {experienceData.map((exp, index) => (
             <div key={index} className="space-y-2">
               <div className="text-2xl font-semibold mb-1">{exp.role}</div>
@@ -87,7 +87,7 @@ const Experience = () => {
               <div className="flex justify-between items-center flex-wrap mb-3">
                 <div className="flex items-center gap-2">
                   <img
-                    src="public/assets/logos/srkay-logo.png"
+                    src="/assets/logos/srkay-logo.png"
                     alt="GTU"
                     className="h-7 w-7 object-contain"
                   />
@@ -133,7 +133,7 @@ const Experience = () => {
               <div className="flex justify-between items-center flex-wrap mb-3">
                 <div className="flex items-center gap-2">
                   <img
-                    src="public/assets/logos/gtu-logo.png"
+                    src="/assets/logos/gtu-logo.png"
                     alt="GTU"
                     className="h-6 w-6 object-contain"
                   />
