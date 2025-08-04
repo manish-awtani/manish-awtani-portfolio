@@ -31,7 +31,7 @@ const Header = () => {
   const menuButtonRef = useRef(null);
   const navigate = useNavigate(); // react-router navigation
   const navItems = [ "Experience","Projects", "Blogs", "About Me"];
-  const resumeLink = "https://drive.google.com/file/d/1HQxGzCjId_vt5YPubE7umseLQtUyxdql/view?usp=drive_link"; // TODO: Replace with your actual resume link
+  const resumeLink = "https://drive.google.com/file/d/1oVLlT1TM4Bvz9O05YXTf_iQrCY-yXF3e/view"; // TODO: Replace with your actual resume link
 
   useEffect(() => {
     avatarImages.forEach((src) => {
