@@ -1,5 +1,6 @@
 import React from "react";
-import experienceData, { educationData } from "../utils/constants/experienceData";
+import { educationData } from "../utils/constants/experienceData";
+import ExperienceTimeline from "../components/ExperienceTimeline";
 
 const Experience = () => {
   // const highlightText = (text, keywords) => {
@@ -18,8 +19,10 @@ const Experience = () => {
       id="experience"
       className="min-h-screen flex flex-col justify-start items-center py-16 px-4"
     >
-      <div className="max-w-4xl w-full font-inter flex flex-col items-start text-left gap-4 
-      text-gray-700 dark:text-gray-300 leading-relaxed">
+      <div
+        className="max-w-4xl w-full font-inter flex flex-col items-start text-left gap-4 
+      text-gray-700 dark:text-gray-300 leading-relaxed"
+      >
         <div className="flex flex-row items-center gap-4 w-full mb-2">
           <h2 className="text-5xl font-bold font-gabarito text-gray-800 dark:text-gray-200 border-b-4 border-pink-500 w-fit pb-2 m-0">
             Work
@@ -29,7 +32,9 @@ const Experience = () => {
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
           My professional journey so far
         </p>
-        <h3 className="mt-10 text-4xl text-gray-800 dark:text-gray-200 font-bold mb-2">Summary</h3>
+        <h3 className="mt-10 text-4xl text-gray-800 dark:text-gray-200 font-bold mb-2">
+          Summary
+        </h3>
         <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
           As a kid, I wanted to be an astronaut. Or a chef. Or maybe both. What
           I didn’t know back then was how early you had to prepare for those
@@ -62,7 +67,7 @@ const Experience = () => {
             rel="noopener noreferrer"
             title="View Resume"
             className="inline-block align-middle transition-transform duration-200 hover:scale-110 hover:drop-shadow-lg no-underline"
-            style={{ textDecoration: 'none', marginLeft: '10px' }}
+            style={{ textDecoration: "none", marginLeft: "10px" }}
           >
             <div className="relative flex flex-col items-center">
               <img
@@ -71,20 +76,19 @@ const Experience = () => {
                 className="w-10 h-10 filter grayscale dark:opacity-40 opacity-60 hover:filter-none dark:hover:opacity-100 hover:opacity-100 transition duration-200"
               />
               {/* <span className="block w-10 h-0.5 bg-blue-400 rounded-full mt-1"></span> */}
-
             </div>
           </a>
         </h3>
 
-        <div className="w-full text-left text-lg text-gray-700 dark:text-gray-300 leading-relaxed 
+        {/* <div className="w-full text-left text-lg text-gray-700 dark:text-gray-300 leading-relaxed 
           space-y-10">
           {experienceData.map((exp, index) => (
             <div key={index} className="space-y-2">
-              <div className="text-2xl font-semibold mb-1">{exp.role}</div>
-              {/* <p className="text-gray-600 dark:text-gray-400">
+              <div className="text-2xl font-semibold mb-1">{exp.role}</div> */}
+        {/* <p className="text-gray-600 dark:text-gray-400">
                 {exp.company}, {exp.location} — <span>{exp.period}</span>
               </p> */}
-              <div className="flex justify-between items-center flex-wrap mb-3">
+        {/* <div className="flex justify-between items-center flex-wrap mb-3">
                 <div className="flex items-center gap-2">
                   <img
                     src="/assets/logos/srkay-logo.png"
@@ -116,17 +120,24 @@ const Experience = () => {
                     {item}
                     {/* text-base list-item marker:text-gray-400
                     dark:marker:text-gray-500 */}
-                  </li>
+        {/* </li>
                 ))}
               </ul>
             </div>
           ))}
-        </div>
-        <h3 className="mt-10 text-4xl text-gray-800 dark:text-gray-200 font-bold mb-2">Education</h3>
+        // </div> */}
+        {/* Timeline experience */}
+        <ExperienceTimeline />
+
+        <h3 className="mt-10 text-4xl text-gray-800 dark:text-gray-200 font-bold mb-2">
+          Education
+        </h3>
 
         {/* Education Section */}
-        <div className="w-full text-left text-lg text-gray-700 dark:text-gray-300 leading-relaxed 
-        space-y-10">
+        <div
+          className="w-full text-left text-lg text-gray-700 dark:text-gray-300 leading-relaxed 
+        space-y-10"
+        >
           {educationData.map((edu, index) => (
             <div key={index} className="space-y-2">
               <div className="text-2xl font-semibold mb-1">{edu.degree}</div>

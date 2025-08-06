@@ -10,16 +10,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tabler/icons-react": "^3.34.1",
     "canvas-confetti": "^1.9.3",
+    "clsx": "^2.1.1",
     "framer-motion": "^12.11.3",
     "lucide-react": "^0.487.0",
+    "motion": "^12.23.12",
     "party-js": "^2.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "react-masonry-css": "^1.0.16",
     "react-router-dom": "^7.6.0",
-    "react-syntax-highlighter": "^15.6.1"
+    "react-syntax-highlighter": "^15.6.1",
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

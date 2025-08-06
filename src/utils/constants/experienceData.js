@@ -1,6 +1,6 @@
 const experienceData = [
   {
-    role: "Associate Software Engineer, Mobile Application",
+    role: "Software Engineer, Fullstack Development",
     company: "SRKAY Consulting Group Pvt. Ltd.",
     companyUrl: "https://www.srkay.com",
     location: "Surat, India",
@@ -28,7 +28,7 @@ const experienceData = [
     ],
   },
   {
-    role: "Mobile Application Development Intern",
+    role: "Software Engineer Intern, Frontend Development",
     company: "SRKAY Consulting Group Pvt. Ltd. (SCIKEY)",
     companyUrl: "https://www.scikey.ai",
     location: "Surat, India",
